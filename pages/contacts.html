@@ -26,9 +26,16 @@
         <div class="contact-block">
             <p><strong>Электронная почта:</strong> example@example.com</p>
             <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
-            <button class="call-button">Позвоните мне</button>
+            <button id  = "call-button" class="call-button">Позвоните мне</button>
         </div>
+
+
     </div>
+    <script>
+        document.getElementById('call-button').addEventListener('click', function() {
+            alert('Не надо звонить, пожалуйста :(');
+        });
+    </script>
 
     <div class="footer">Футер</div>
 </div>
