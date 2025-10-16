@@ -3,70 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <title>Главная - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
-<div class="page-container">
-    <header class="header">
-       <h1> Добро пожаловать!</h1>
+<body class="bg-light">
+<div class="container-fluid p-0">
+
+    <!-- Шапка -->
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="h3 mb-1">Портфолио — Демина Екатерина Андреевна</h1>
+                    <p class="mb-0 opacity-75">Студент группы ЭФБО-04-24</p>
+                </div>
+                <div class="col-auto">
+                    <span class="badge bg-light text-primary">МИРЭА</span>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
-        </ul>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/news.html"><i class="bi bi-newspaper me-1"></i>Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/practices.html"><i class="bi bi-code-slash me-1"></i>Практики</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/goods.html"><i class="bi bi-cart me-1"></i>Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html"><i class="bi bi-telephone me-1"></i>Контакты</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main class="content">
-        <article class="profile-header">
-            <h1 class="profile-title">Информация об авторе</h1>
+    <!-- Основной контент -->
+    <main class="container my-5">
 
-            <img class="profile-photo" src="images/photo.png" alt="Фото автора">
-            <h2 class="profile-name">Демина Екатерина Андреевна</h2>
-            <p class="profile-group">ЭФБО-04-24</p>
-        </article>
-
-        <div class="about-me">
-            <p>Студент МИРЭА. Учусь на факультете "Фуллстек-разработчик"</p>
-        </div>
-
-        <section class="skills-container">
-            <h2>Мои навыки</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">C++</div>
-                <div class="skill-tag">C#</div>
+        <!-- Профиль -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center mb-3 mb-md-0">
+                            <img src="images/photo.png" alt="Фото автора" class="img-fluid rounded-circle shadow" style="width:150px; height:150px; object-fit:cover;">
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="h4 text-primary mb-2">Демина Екатерина Андреевна</h2>
+                            <p class="text-muted mb-2"><i class="bi bi-mortarboard-fill text-primary"></i> Студентка направления "Фуллстек-разработчик"</p>
+                            <p class="mb-3">Изучаю веб-разработку, люблю создавать интерфейсы и решать задачи по алгоритмам.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-success">CSS</span>
+                                <span class="badge bg-warning text-dark">C++</span>
+                                <span class="badge bg-info text-dark">Python</span>
+                                <span class="badge bg-danger">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h3 class="card-title h5 mb-0">
+                        <i class="bi bi-tools text-primary"></i>
+                        Мои навыки
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>SQL</span>
+                                    <span class="text-primary">85%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>C++</span>
+                                    <span class="text-primary">80%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Python</span>
+                                    <span class="text-primary">90%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Java</span>
+                                    <span class="text-primary">75%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="experience-section">
-            <h2 class="section-title">Мой опыт работы</h2>
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <h3 class="experience-title">Опыт 1</h3>
-                    <p class="experience-desc">Создала игру виселица.</p>
-                </article>
-                <article class="experience-card">
-                    <h3 class="experience-title">Опыт 2</h3>
-                    <p class="experience-desc">Сдала практички по алгоритмам.</p>
-                </article>
-                <article class="experience-card">
-                    <h3 class="experience-title">Опыт 3</h3>
-                    <p class="experience-desc">Создала телеграм бота.</p>
-                </article>
+        <!-- Обо мне -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h3 class="h5 mb-0"><i class="bi bi-person-circle text-primary"></i> Обо мне</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Я студентка МИРЭА, обучаюсь на факультете "Фуллстек-разработчик".
+                        Активно изучаю frontend и backend технологии, создаю учебные проекты и интерфейсы на HTML, CSS и C++.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Опыт -->
+        <!-- Projects Section -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h3 class="card-title h5 mb-0">
+                        <i class="bi bi-folder-fill text-primary"></i>
+                        Мои проекты
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="images/project1.jpg" class="cardimg-top" alt="Игра" style="height: 150px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Личный сайт</h5>
+                                    <p class="card-text small text-muted">
+                                        Создала игру "Виселица" в стиле Minecraft на С++ с QT и графическим интерфейсом.
+                                    </p>
+                                    <div class="mb-2"><span class="badge bgprimary">HTML</span>
+                                        <span class="badge bgprimary">CSS</span>
+                                        <span class="badge bgprimary">Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="images/project2.jpg" class="cardimg-top" alt="Алгоритмы и структуры данных" style="height: 150px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Алгоритмы и структуры данных</h5>
+                                    <p class="card-text small text-muted">
+                                        Сдала практические по алгоритмам, включая сортировки и графы.
+
+                                    </p>
+                                    <div class="mb-2"><span class="badge bgsuccess">c++</span>
+                                        <span class="badge bgsuccess">LocalStorage</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="images/project3.jpg" class="cardimg-top" alt="почта Деда Мороза" style="height: 150px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Телеграм-бот</h5>
+                                    <p class="card-text small text-muted">
+                                        Разработала телеграм-бота на Python c простым меню
+                                    </p>
+                                    <div class="mb-2"><span class="badge bginfo"></span>
+                                        <span class="badge bg-info">python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <!---->
-    <footer class="footer">
-        <p>Футер</p>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Демина Екатерина. Все права защищены.</p>
+        </div>
     </footer>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

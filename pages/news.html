@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости</title>
     <link rel="stylesheet" href="../style/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 <div class="page-container">
+
     <header class="header">
-        <h1>Новости</h1>
+        <h1 class="header__title">Новости</h1>
     </header>
 
     <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="practices.html" class="nav__link">Практики</a></li>
+            <li class="nav__item"><a href="goods.html" class="nav__link">Товары</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            <li class="nav__item nav__item--active"><a href="news.html" class="nav__link">Новости</a></li>
+
         </ul>
     </nav>
 
+
     <main class="content">
-        <h1 class="section-title">Новости</h1>
+        <section class="news">
+            <h2 class="section-title">Последние новости</h2>
 
-        <div class="news-container">
-            <article class="news-card">
-                <h2 class="news-title">Новая версия змеи</h2>
-                <p class="news-meta">01.01.2025 — Автор: Иванов И.</p>
-                <p class="news-text">Вышла новая версия Python!.</p>
-            </article>
+            <div class="news__list">
+                <article class="news-card">
+                    <h3 class="news-card__title">Вышла новая версия Python</h3>
+                    <p class="news-card__date">1 января 2025</p>
+                    <p class="news-card__text">Python стал ещё быстрее, а его синтаксис — удобнее для начинающих разработчиков.</p>
+                </article>
 
-            <article class="news-card">
-                <h2 class="news-title">Нейросети захватывают мир!</h2>
-                <p class="news-meta">15.02.2025 — Автор: Петров П.</p>
-                <p class="news-text">Нейросеть научилась писать.</p>
-            </article>
+                <article class="news-card">
+                    <h3 class="news-card__title">Искусственный интеллект в обучении</h3>
+                    <p class="news-card__date">10 февраля 2025</p>
+                    <p class="news-card__text">Нейросети активно применяются в учебных проектах студентов МИРЭА.</p>
+                </article>
 
-            <article class="news-card">
-                <h2 class="news-title">Новый гений C#(Оффер от майкрософт)#</h2>
-                <p class="news-meta">10.03.2025 — Автор: Сидоров С.</p>
-                <p class="news-text">Катя написала календарь на C#.</p>
-            </article>
-        </div>
+                <article class="news-card">
+                    <h3 class="news-card__title">Выпущен проект “Виселица Minecraft”</h3>
+                    <p class="news-card__date">25 марта 2025</p>
+                    <p class="news-card__text">Студентка ЭФБО-04-24 представила игру с интерфейсом на Qt и визуалами из Minecraft.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>Футер</p>
+        <p class="footer__text">&copy; 2025 Новости проекта</p>
     </footer>
+
+
 </div>
+
+
 </body>
 </html>

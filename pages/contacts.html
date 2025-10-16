@@ -5,289 +5,348 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Контакты</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <style>
-        /* Стили для модального окна */
-        dialog::backdrop {
-            background: rgba(0, 0, 0, 0.6);
-            animation: fadeIn 0.3s ease;
-        }
-
-        dialog {
-            border: none;
-            border-radius: 12px;
-            padding: 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: slideIn 0.3s ease;
-            max-width: 500px;
-            width: 90vw;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, #303057 0%, #34495e 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px 12px 0 0;
-            margin: 0;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .modal-content {
-            padding: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e9ecef;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 2rem;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: #f8f9fa;
-            color: #2c3e50;
-            border: 2px solid #e9ecef;
-        }
-
-        .btn-secondary:hover {
-            background: #e9ecef;
-        }
-
-        .required {
-            color: #e74c3c;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* Адаптивность */
-        @media (max-width: 600px) {
-            dialog {
-                margin: 1rem;
-                width: calc(100vw - 2rem);
-            }
-
-            .modal-actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-<div class="page-container">
+<div class="page">
+
     <header class="header">
-        <h1>Контакты</h1>
+        <h1 class="header__title">Контакты</h1>
     </header>
 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+    <nav class="nav nav--main">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+            <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+            <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+            <li class="nav__item nav__item--active"><a class="nav__link" href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
 
-    <main class="content">
-        <h1 class="section-title">Контакты</h1>
+    <main class="main">
+        <section class="contacts">
+            <h2 class="contacts__title">Свяжитесь с нами</h2>
+            <div class="contacts__list">
+                <div class="contacts__item contact-item">
+                    <h3 class="contact-item__title"><i ></i> Электронная почта</h3>
+                    <p class="contact-item__value">example@example.com</p>
+                </div>
+                <div class="contacts__item contact-item">
+                    <h3 class="contact-item__title"><i></i> Адрес</h3>
+                    <p class="contact-item__value">г. Москва, ул. Примерная, д. 1</p>
+                </div>
+            </div>
 
-        <section class="contacts-container">
-            <article class="contact-info">
-                <h3>Электронная почта</h3>
-                <p><strong>Адрес электронной почты:</strong> example@example.com</p>
-            </article>
+            <div class="contacts__actions">
+                <!-- Обычная кнопка смены темы рядом с кнопкой модального окна -->
+                <button class="button button--secondary" id="themeToggle" title="Переключить тему">
+                    <i ></i> Сменить тему
+                </button>
 
-            <article class="contact-info">
-                <h3>Физический адрес</h3>
-                <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
-            </article>
+                <!-- Кнопка открытия модалки по БЭМ -->
+                <button class="button button--primary" id="openDialog" type="button">
+                    <i ></i> Написать нам
+                </button>
+            </div>
 
+            <!-- Модальное окно по БЭМ -->
+            <dialog class="modal" id="contactDialog" aria-labelledby="dialogTitle">
+                <div class="modal__header">
+                    <h2 class="modal__title" id="dialogTitle">Обратная связь</h2>
+                </div>
+                <form class="form" id="contactForm" method="dialog">
+                    <div class="form__content">
+                        <div class="form__field">
+                            <label class="form__label" for="name">Имя *</label>
+                            <input class="form__input" id="name" name="name" type="text"
+                                   placeholder="Иванов Иван Петрович" required minlength="2"
+                                   autocomplete="given-name">
+                            <div class="form__error" id="nameError"></div>
+                        </div>
 
-            <!-- Кнопка для открытия модального окна -->
-            <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
+                        <div class="form__field">
+                            <label class="form__label" for="email">E-mail *</label>
+                            <input class="form__input" id="email" name="email" type="email"
+                                   placeholder="t@mail.com" required autocomplete="email">
+                            <div class="form__error" id="emailError"></div>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="phone">Телефон *</label>
+                            <input class="form__input" id="phone" name="phone" type="tel"
+                                   inputmode="tel" autocomplete="tel"
+                                   aria-describedby="phoneHelp"
+                                   placeholder="+7 (900) 000-00-00"
+                                   required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                            <small class="form__help" id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+                            <div class="form__error" id="phoneError"></div>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="date">Дата</label>
+                            <input class="form__input" id="date" name="date" type="date">
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="topic">Тема *</label>
+                            <select class="form__select" id="topic" name="topic" required>
+                                <option value="">Выберите тему</option>
+                                <option class="form__option" value="question">Вопрос</option>
+                                <option class="form__option" value="order">Заказ</option>
+                                <option class="form__option" value="cooperation">Сотрудничество</option>
+                            </select>
+                            <div class="form__error" id="topicError"></div>
+                        </div>
+
+                        <div class="form__field">
+                            <label class="form__label" for="message">Сообщение *</label>
+                            <textarea class="form__textarea" id="message" name="message"
+                                      rows="4" required placeholder="Введите ваше сообщение..."></textarea>
+                            <div class="form__error" id="messageError"></div>
+                        </div>
+                    </div>
+
+                    <div class="modal__actions">
+                        <button class="button button--secondary" type="button" id="closeDialog">Закрыть</button>
+                        <button class="button button--primary" type="submit" id="submitBtn">Отправить</button>
+                    </div>
+                </form>
+            </dialog>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Футер</p>
+        <p class="footer__text">&copy; 2025 Контакты проекта</p>
     </footer>
 
-    <!-- Модальное окно для формы обратной связи -->
-    <dialog id="contactModal">
-        <div class="modal-header">
-            <h2>Форма обратной связи</h2>
-        </div>
-
-        <div class="modal-content">
-            <form id="feedbackForm" method="dialog">
-                <div class="form-group">
-                    <label for="name">Имя <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Телефон <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Электронная почта <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
-                </div>
-
-                <div class="form-group">
-                    <label for="category">Категория обращения <span class="required">*</span></label>
-                    <select id="category" name="category" required>
-                        <option value="">Выберите категорию</option>
-                        <option value="technical">Техническая поддержка</option>
-                        <option value="commercial">Коммерческое предложение</option>
-                        <option value="cooperation">Сотрудничество</option>
-                        <option value="complaint">Жалоба</option>
-                        <option value="suggestion">Предложение</option>
-                        <option value="other">Другое</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Текст обращения <span class="required">*</span></label>
-                    <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
-                </div>
-
-                <div class="modal-actions">
-                    <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-                    <button type="submit" class="btn btn-secondary">Отмена</button>
-                    <!-- Кнопка отправки с обработкой через JavaScript -->
-                    <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
-                </div>
-            </form>
-        </div>
-    </dialog>
 </div>
 
 <script>
-    // Функция для отправки формы
-    function submitForm() {
-        const form = document.getElementById('feedbackForm');
-        const formData = new FormData(form);
+    // Функционал модального окна
+    const openDialog = document.getElementById('openDialog');
+    const closeDialog = document.getElementById('closeDialog');
+    const contactDialog = document.getElementById('contactDialog');
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
 
-        // Простая валидация
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
+    // Элементы формы для валидации
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const topicSelect = document.getElementById('topic');
+    const messageTextarea = document.getElementById('message');
+
+    // Элементы для отображения ошибок
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const topicError = document.getElementById('topicError');
+    const messageError = document.getElementById('messageError');
+
+    // Регулярные выражения для валидации
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+
+    // Функции валидации
+    function validateName() {
+        const value = nameInput.value.trim();
+        if (value.length < 2) {
+            nameError.textContent = 'Имя должно содержать минимум 2 символа';
+            nameInput.classList.add('form__input--error');
+            return false;
+        } else {
+            nameError.textContent = '';
+            nameInput.classList.remove('form__input--error');
+            return true;
         }
-
-        // Собираем данные формы
-        const data = {
-            name: formData.get('name'),
-            phone: formData.get('phone'),
-            email: formData.get('email'),
-            category: formData.get('category'),
-            message: formData.get('message')
-        };
-
-        // В реальном приложении здесь был бы AJAX-запрос
-        console.log('Данные формы:', data);
-
-        // Показываем уведомление об успешной отправке
-        alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
-
-        // Закрываем модальное окно
-        contactModal.close();
-
-        // Очищаем форму
-        form.reset();
     }
 
-    // Закрытие модального окна по клику на фон
-    document.getElementById('contactModal').addEventListener('click', function(event) {
-        if (event.target === this) {
-            this.close();
+    function validateEmail() {
+        const value = emailInput.value.trim();
+        if (!emailRegex.test(value)) {
+            emailError.textContent = 'Введите корректный email адрес';
+            emailInput.classList.add('form__input--error');
+            return false;
+        } else {
+            emailError.textContent = '';
+            emailInput.classList.remove('form__input--error');
+            return true;
+        }
+    }
+
+    function validatePhone() {
+        const value = phoneInput.value.trim();
+        if (!phoneRegex.test(value)) {
+            phoneError.textContent = 'Введите телефон в формате: +7 (900) 000-00-00';
+            phoneInput.classList.add('form__input--error');
+            return false;
+        } else {
+            phoneError.textContent = '';
+            phoneInput.classList.remove('form__input--error');
+            return true;
+        }
+    }
+
+    function validateTopic() {
+        const value = topicSelect.value;
+        if (!value) {
+            topicError.textContent = 'Выберите тему обращения';
+            topicSelect.classList.add('form__input--error');
+            return false;
+        } else {
+            topicError.textContent = '';
+            topicSelect.classList.remove('form__input--error');
+            return true;
+        }
+    }
+
+    function validateMessage() {
+        const value = messageTextarea.value.trim();
+        if (value.length < 10) {
+            messageError.textContent = 'Сообщение должно содержать минимум 10 символов';
+            messageTextarea.classList.add('form__input--error');
+            return false;
+        } else {
+            messageError.textContent = '';
+            messageTextarea.classList.remove('form__input--error');
+            return true;
+        }
+    }
+
+    // Общая функция валидации формы
+    function validateForm() {
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isPhoneValid = validatePhone();
+        const isTopicValid = validateTopic();
+        const isMessageValid = validateMessage();
+
+        return isNameValid && isEmailValid && isPhoneValid && isTopicValid && isMessageValid;
+    }
+
+    // Слушатели событий для реальной валидации
+    nameInput.addEventListener('input', validateName);
+    nameInput.addEventListener('blur', validateName);
+
+    emailInput.addEventListener('input', validateEmail);
+    emailInput.addEventListener('blur', validateEmail);
+
+    phoneInput.addEventListener('input', validatePhone);
+    phoneInput.addEventListener('blur', validatePhone);
+
+    topicSelect.addEventListener('change', validateTopic);
+    topicSelect.addEventListener('blur', validateTopic);
+
+    messageTextarea.addEventListener('input', validateMessage);
+    messageTextarea.addEventListener('blur', validateMessage);
+
+    // Открытие модального окна
+    openDialog.addEventListener('click', () => {
+        contactDialog.showModal();
+        // Сброс ошибок при открытии
+        clearErrors();
+    });
+
+    // Закрытие модального окна
+    closeDialog.addEventListener('click', () => {
+        contactDialog.close();
+        contactForm.reset();
+        clearErrors();
+    });
+
+    // Функция очистки ошибок
+    function clearErrors() {
+        nameError.textContent = '';
+        emailError.textContent = '';
+        phoneError.textContent = '';
+        topicError.textContent = '';
+        messageError.textContent = '';
+
+        nameInput.classList.remove('form__input--error');
+        emailInput.classList.remove('form__input--error');
+        phoneInput.classList.remove('form__input--error');
+        topicSelect.classList.remove('form__input--error');
+        messageTextarea.classList.remove('form__input--error');
+    }
+
+    // Обработка отправки формы
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (validateForm()) {
+            // Собираем данные формы
+            const formData = {
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim(),
+                phone: phoneInput.value.trim(),
+                date: document.getElementById('date').value,
+                topic: topicSelect.options[topicSelect.selectedIndex].text,
+                message: messageTextarea.value.trim()
+            };
+
+            console.log('Данные формы:', formData);
+            alert('Спасибо! Ваше сообщение отправлено.\n\nМы свяжемся с вами в ближайшее время.');
+            contactDialog.close();
+            contactForm.reset();
+            clearErrors();
+        } else {
+            alert('Пожалуйста, исправьте ошибки в форме.');
         }
     });
 
-    // Обработка отправки формы через Enter (предотвращаем стандартное поведение)
-    document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
-        if (event.key === 'Enter' && event.target.type !== 'textarea') {
-            event.preventDefault();
+    // Закрытие по клику вне модального окна
+    contactDialog.addEventListener('click', (e) => {
+        const dialogDimensions = contactDialog.getBoundingClientRect();
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            contactDialog.close();
+            contactForm.reset();
+            clearErrors();
+        }
+    });
+
+    // Маска для телефона
+    phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+
+        if (value.startsWith('7')) {
+            value = value.substring(1);
+        }
+
+        if (value.length > 0) {
+            value = '+7 (' + value;
+            if (value.length > 7) {
+                value = value.substring(0, 7) + ') ' + value.substring(7);
+            }
+            if (value.length > 12) {
+                value = value.substring(0, 12) + '-' + value.substring(12);
+            }
+            if (value.length > 15) {
+                value = value.substring(0, 15) + '-' + value.substring(15);
+            }
+        }
+
+        e.target.value = value;
+    });
+
+    // Функционал переключения темы (обычная кнопка)
+    const toggle = document.getElementById('themeToggle');
+    const toggleIcon = toggle.querySelector('i');
+
+    toggle.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.documentElement.removeAttribute('data-theme');
+
+            toggle.innerHTML = '<i ></i> Сменить тему';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggle.innerHTML = '<i ></i> Сменить тему';
         }
     });
 </script>
